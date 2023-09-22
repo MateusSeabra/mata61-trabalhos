@@ -21,6 +21,10 @@
 "char"               { return KEY; }
 "void"               { return KEY; }
 "print"              { return KEY; }
+"boolean"            { return KEY; }
+"false"              { return KEY; }
+"true"               { return KEY; }
+"string"             { return KEY; }
 "{"                  { return SYM; }
 "}"                  { return SYM; }
 "("                  { return SYM; }
@@ -29,9 +33,20 @@
 ","                  { return SYM; }
 ":"                  { return SYM; }
 "="                  { return SYM; }
+"<"                  { return SYM; }
+">"                  { return SYM; }
+"+"                  { return SYM; }
+"-"                  { return SYM; }
+"*"                  { return SYM; }
+"/"                  { return SYM; }
+"%"                  { return SYM; }
+"!"                  { return SYM; }
 "<="                 { return SYMC; }
 ">="                 { return SYMC; }
 "!="                 { return SYMC; }
+"=="                 { return SYMC; }
+"&&"                 { return SYMC; }
+"||"                 { return SYMC; }
 
 [0-9]+                 { yylval.str = strdup(yytext); return NUM; }
 [a-zA-Z_][a-zA-Z0-9_]* { yylval.str = strdup(yytext); return ID; }
