@@ -9,6 +9,10 @@ void yyerror(char *s, ...);
 int yylex();
 %}
 
+%union {
+    char *str;
+}
+
 /* declare tokens */ 
 %token ID
 %token KEY
