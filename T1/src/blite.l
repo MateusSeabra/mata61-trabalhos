@@ -41,7 +41,7 @@
 
 \"[^"\n]*\"          { yylval.str = strdup(yytext); return STRING; }
 
-\n                   { yylineno++; } 
+\n                   
 
 .                    { yylval.str = strdup(yytext); return ERROR; }
 
